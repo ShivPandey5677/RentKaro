@@ -35,9 +35,14 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="flex-none mr-6 ml-4">
-          <img className="w-[500px] h-auto mb-8 mr-8" src="/assets/pic.jpg" alt="profile pic" />
-        </div>
+        <div className='my-auto'>
+  <img 
+    className='w-[300px] sm:w-[500px] mx-auto h-auto' 
+    src={"https://i.pinimg.com/736x/fb/4e/5b/fb4e5b3e6b5a6b6836f59090c0f62a6c.jpg"} 
+    alt="profile pic" 
+    style={{ mixBlendMode: 'multiply' }} // Apply blend mode inline
+  />
+</div>
 
       </div>
     </div>
