@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const PropertyCard = () => {
   return (
     <div className="max-w-md rounded overflow-hidden shadow-lg bg-gray-800 relative transition duration-300 transform hover:scale-105 my-8 mx-auto">
@@ -21,7 +22,10 @@ const PropertyCard = () => {
         </div>
        </div>
       </div>
+     
     </div>
+  
+    
   );
 }
 
