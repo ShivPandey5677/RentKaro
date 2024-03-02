@@ -11,17 +11,21 @@ import Register from "./pages/register";
 import Home from "./pages/Home";
 import Property from "./pages/Property";
 import View from "./pages/View";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext";
 function App() {
-  const currentUser=false;
+  const {currentUser}=useContext(AuthContext);
+  const queryClient=new QueryClient();
   const Layout=()=>{
     return (
-      //<QueryClientProvider client={queryClient}>
+      <QueryClientProvider client={queryClient}>
        <div className="bg-[#86B6F6]">
        {!currentUser?
       <Navbar/>:<NavbarL/>}
         <Outlet/>
         </div>
-       // </QueryClientProvider>
+       </QueryClientProvider>
     );
 
   };

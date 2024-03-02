@@ -42,7 +42,7 @@ const Properties = () => {
             animate={{ scale: 1 }}
             className="text-xl mb-8"
           ><br></br>
-            RentKaro, where dreams take flight, finding your perfect PG in just a byte!
+            RentKaro, where dreams take flight, finding your perfect ACCOMMODATION in just a byte!
           </motion.p>
           <div className="flex flex-row">
             <Link to="/psychiatrist">

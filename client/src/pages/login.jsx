@@ -1,21 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/authContext';
 
 const Login = () => {
   const [inputs, setInputs] = useState({
     username: "",
     password: "",
   });
-
-  const [isOpen, setIsOpen] = useState(false); // State to track if popup is open
-
-  const handleChange = (e) => {
-    setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const [err, setErr] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate=useNavigate();
+  const handleChange=(e)=>{
+    setInputs((prev)=>({...prev,[e.target.name]:e.target.value}))
+  }
+  const {login}=useContext(AuthContext);
+  const handleLogin=async (e)=>{
+    e.preventDefault()
+    try{
+    const res=await login(inputs);
+    navigate("/")
+    }catch(err){
+      if (err.response && err.response.data && err.response.data.message) {
+        setErr(err.response.data.message);
+      } else {
+        setErr("An unexpected error occurred.");
+      }
+    }
+  }
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
   };
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    // Your login logic here
-  };
+// State to track if popup is open
 
 
 
@@ -64,12 +80,14 @@ const Login = () => {
                   </div>
                 </div>
               </div>
+              <Link to="/">
               <button
                 onClick={handleClose}
                 className="mt-4 bg-blue-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
               >
                 Close
               </button>
+              </Link>
             </div>
           </div>
         </div>
