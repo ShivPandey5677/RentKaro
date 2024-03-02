@@ -1,20 +1,21 @@
 import React from 'react';
 
-const Option = () => {
+const Option = ({ type, onClose }) => {
   return (
-    <div className="flex h-screen">
-      <div className="flex-1 bg-blue-400 flex justify-center items-center">
-        <button className="bg-white text-blue-400 hover:bg-blue-200 hover:text-white text-4xl font-bold py-4 px-8 rounded-lg">
-        <a href="https://wa.me/7457012139" target="_blank" rel="noopener noreferrer">
-        Tenants
-        </a>
-          
-        </button>
-      </div>
-      <div className="flex-1 bg-blue-600 flex justify-center items-center">
-        <button className="bg-white text-blue-600 hover:bg-blue-400 hover:text-white text-4xl font-bold py-4 px-8 rounded-lg">
-          Owners
-        </button>
+    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
+      <div className="bg-gray-800 bg-opacity-50 fixed top-0 left-0 w-full h-full"></div> {/* Background overlay */}
+      <div className="relative bg-white rounded-lg p-8">
+        <div className="flex flex-col items-center justify-center">
+          <div className="text-black text-4xl font-bold mb-4">
+            {type === "tenant" ? "Tenants" : "Owners"}
+          </div>
+          <button className="bg-blue-400 text-white hover:bg-blue-600 font-bold py-2 px-4 rounded-lg mb-4" onClick={onClose}>
+            {type === "tenant" ? "Contact Tenants" : "Contact Owners"}
+          </button>
+          <button className="bg-gray-400 text-white hover:bg-gray-600 font-bold py-2 px-4 rounded-lg" onClick={onClose}>
+            Close
+          </button>
+        </div>
       </div>
     </div>
   );

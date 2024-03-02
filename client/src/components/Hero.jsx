@@ -1,51 +1,60 @@
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import LoginPopup from './LoginPopup';
 
 const Hero = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
   return (
-    <div className="bg-slate-900 text-white min-h-screen">
-      <div className='my-7 sm:my-0 max-w-[1200px] h-full mx-auto flex flex-col-reverse sm:flex-row justify-center align-center' id='home'>
-
-        <div className='flex-col my-auto mx-auto'>
-          <p className='md:text-5xl sm:text-4xl text-xl font-bold text-purple-300'>Hi! I am Abhishek Jha</p>
-
-          <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
-            <TypeAnimation
-              sequence={[
-                "Frontend Dev",
-                1000,
-                "Webdesigner",
-                1000,
-                "Consultant",
-                1000,
-              ]}
-              wrapper='span'
-              speed={50}
-              repeat={Infinity}
-            />
+    <div className="h-screen bg-gray-900 text-white">
+      <div className="container mx-auto flex items-center justify-center h-full">
+        <motion.div
+          initial={{ x: '100vw', scale: 0.5 }}
+          animate={{ x: 0, scale: 1 }}
+          transition={{ type: 'spring', stiffness: 80, duration: 1.5 }}
+          className="flex-none mr-8"
+        >
+          <img src="/assets/images/new.jpg" alt="Quiz" className="rounded-lg mb-8 mr-8" style={{ maxWidth: '700px' }} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0.5, duration: 1.5, type: 'spring', stiffness: 80 }}
+          className="flex flex-col items-center"
+        >
+          <h1 className="text-5xl font-bold mb-4 ">
+            <span className="gradient-text">
+              <TypeAnimation
+                sequence={['Paying Guest', 1000, 'Flat', 1000, 'House', 1000, 'Accomodation', 1000]}
+                wrapper="span"
+                typingSpeed={10000}
+                repeat={Infinity}
+              />
+            </span>
+            Renting and Listing System
           </h1>
-          <div className='flex justify-center items-center'>
-            <p className='md:text-5xl sm:text-4xl text-xl font-bold text-orange-100'>proficient beginner, Developing Skills</p>
-          </div>
-          <div className='text-5xl flex justify-start gap-16 my-7 text-purple-900'>
-            <AiFillLinkedin />
-            <AiFillGithub />
-            <AiFillInstagram />
-          </div>
-          <div class="relative inline-flex group my-3">
-            <div class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#866e84] to-[#4b1815] rounded-xl blur-ig group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-            <a href='/' title="Download CV" role="button" class="w-[190px] h-[60px] relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-primary-color font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">Download CV</a>
-          </div>
-        </div>
-
-        <div className='my-auto'>
-          <img className='w-[300px] sm:w-[500px] mx-auto h-auto' src={""} alt="profile pic" />
-        </div>
-
+          <motion.p
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            className="text-xl mb-8"
+          ><br></br>
+            Find Your Perfect Accommodation
+          </motion.p>
+          
+          <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-blue-800 " onClick={togglePopup}>
+            Continue
+          </button>
+          
+        </motion.div>
       </div>
+      {showPopup && <LoginPopup onClose={togglePopup} />}
     </div>
   );
-}
+};
 
 export default Hero;
