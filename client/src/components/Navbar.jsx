@@ -11,7 +11,7 @@ const Navbar = () => {
         
       <nav className="flex flex-row items-center justify-between bg-slate-900 text-white py-4 px-6">
         <div  className="logo-container">
-        <h1>LOGO</h1>
+        <h1>RentKaro</h1>
       </div>
         <div className="flex items-center">
           <span className="text-3xl font-bold"></span>
