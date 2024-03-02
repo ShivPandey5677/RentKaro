@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import Register from "./pages/register";
 import Home from "./pages/Home";
+import Property from "./pages/Property";
+import View from "./pages/View";
 function App() {
   const currentUser=false;
   const Layout=()=>{
@@ -33,6 +35,14 @@ function App() {
         {
           path:"/",
           element:<Home/>
+        },
+        {
+          path:'/property',
+          element:<Property/>
+        },
+        {
+          path:'/viewproperty',
+          element:<View/>
         },
       ]
     },

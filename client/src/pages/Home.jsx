@@ -1,12 +1,16 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import Properties from '../components/Properties.jsx'
+import PropertyCard from '../components/PropertyCard'
+import Properties from '../components/Properties'
+
 
 const Home = () => {
   return (
     <div>
       <Hero/>
-      <Properties />
+      <Properties/>
+
+     
     </div>
   )
 }

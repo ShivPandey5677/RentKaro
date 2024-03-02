@@ -11,7 +11,7 @@ const Navbar = () => {
         
       <nav className="flex flex-row items-center justify-between bg-slate-900 text-white py-4 px-6">
         <div  className="logo-container">
-        <h1>LOGO</h1>
+        <h1>RentKaro</h1>
       </div>
         <div className="flex items-center">
           <span className="text-3xl font-bold"></span>
@@ -24,7 +24,7 @@ const Navbar = () => {
             <AiOutlineInfoCircle size={20}/> About
           </Link>
 
-          <Link to="/psychiatrist" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
+          <Link to="/property" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
             <MdOutlineHomeWork size={20}/> Properties
           </Link> 
         </div>
