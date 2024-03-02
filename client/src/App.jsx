@@ -11,6 +11,7 @@ import Register from "./pages/register";
 import Home from "./pages/Home";
 import Property from "./pages/Property";
 import View from "./pages/View";
+import Listproperty from "./pages/Listproperty";
 function App() {
   const currentUser=false;
   const Layout=()=>{
@@ -54,7 +55,10 @@ function App() {
       path: "/register",
       element: <Register/>,
     },
-    
+    {
+      path: "/listproperty",
+      element: <Listproperty/>,
+    },
    
   ]);
  
