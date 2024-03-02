@@ -12,11 +12,16 @@ const Register = () => {
     setIsOpen(!isOpen);
   };
 
+  const handlePictureChange = (event) => {
+    const file = event.target.files[0]; // Get the first selected file
+    setInputs({ ...inputs, picture: file });
+  };
+
   return (
     <div>
       <div className="fixed inset-0 flex items-center justify-center">
       <img
-            src="/assets/images/new.jpg"
+            src="/assets/images/heross1.png"
             alt="Quiz"
             className="fixed inset-0 object-cover w-full h-full"
           />
@@ -57,6 +62,13 @@ const Register = () => {
                     // onChange={handleChange}
                     className="border-none border-b-2 border-blue-100 p-2 rounded-md"
                   />
+                  <input
+                      type="file"
+                      name="picture"
+                      onChange={handlePictureChange}
+                      accept="image/*" // Accept only image files
+                      className="border-none border-b-2 border-blue-100 p-2 rounded-md"
+                    />
                   <button
                     // onClick={handleClick}
                     className="w-1/2 p-2 border-none bg-[#176B87] text-white font-bold cursor-pointer rounded-md"

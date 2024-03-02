@@ -241,6 +241,11 @@
         #0e0f0f 100%
       );
     }
+
+    .blend-image {
+      mix-blend-mode: overlay; /* Apply blend mode */
+    }
+    
     .gradient-text {
       background-image: linear-gradient(to right, #86B6F6, #176B87); /* Gradient colors */
       -webkit-background-clip: text; /* For webkit-based browsers like Chrome and Safari */
@@ -248,7 +253,7 @@
       color: transparent; /* Make the text transparent to reveal the gradient background */
     }
     .gradient-textpsych {
-        background-image: linear-gradient(to right,#b695f0, #11b6cb); /* Gradient colors */
+        background-image: linear-gradient(to right,#1B1A55, #433c7b ); /* Gradient colors */
         -webkit-background-clip: text; /* For webkit-based browsers like Chrome and Safari */
         background-clip: text; /* Specifies the painting area of the background */
         color: transparent; /* Make the text transparent to reveal the gradient background */
