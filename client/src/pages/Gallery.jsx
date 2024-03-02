@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropertyCard from '../components/PropertyCard';
+import UserCard from './UserCard';
 
 const Gallery = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -108,11 +109,7 @@ const Gallery = () => {
           <option>Tenant 3</option>
         </select>
       </div>
-      <div className="flex flex-wrap justify-center">
-    {filteredProperties.map(property => (
-      <PropertyCard key={property} />
-    ))}
-  </div>
+    <UserCard/>
     </div>
     
   );

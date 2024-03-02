@@ -1,7 +1,8 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import PropertyCard from '../components/PropertyCard'
+
 import Properties from '../components/Properties'
+
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     <div>
       <Hero/>
       <Properties/>
+    
 
      
     </div>
