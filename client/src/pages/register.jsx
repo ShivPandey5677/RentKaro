@@ -25,7 +25,7 @@ const Register = () => {
             alt="Quiz"
             className="fixed inset-0 object-cover w-full h-full"
           />
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75"></div>
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-60 backdrop-filter backdrop-blur-sm"></div>
           <div className="fixed inset-0 flex items-center justify-center">
             <div className="bg-blue-100 p-8 rounded shadow-md w-96">
           <h1 className="text-2xl font-semibold text-[#176B87] mb-4">SignUp</h1>
@@ -62,13 +62,6 @@ const Register = () => {
                     // onChange={handleChange}
                     className="border-none border-b-2 border-blue-100 p-2 rounded-md"
                   />
-                  <input
-                      type="file"
-                      name="picture"
-                      onChange={handlePictureChange}
-                      accept="image/*" // Accept only image files
-                      className="border-none border-b-2 border-blue-100 p-2 rounded-md"
-                    />
                   <button
                     // onClick={handleClick}
                     className="w-1/2 p-2 border-none bg-[#176B87] text-white font-bold cursor-pointer rounded-md"
