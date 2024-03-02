@@ -54,7 +54,7 @@ const Gallery = () => {
 
   return (
     <div className="flex">
-      <div className="w-2/3 flex flex-wrap">
+      <div className="w-2/3 flex flex-wrap mt-8">
         {images.slice(0, 2).map((image, index) => (
           <div key={index} className="w-1/2 p-2 relative">
             <a href="">
@@ -68,7 +68,7 @@ const Gallery = () => {
           </div>
         ))}
       </div>
-      <div className="w-1/3 p-4">
+      <div className="w-1/3 p-4 ml-44 mt-20">
         <h2 className="text-xl font-semibold mb-4">Flat/PG Information</h2>
         <ul>
           <li className="flex items-center mb-2">

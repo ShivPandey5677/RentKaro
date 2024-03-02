@@ -5,7 +5,7 @@ import Gallery from './Gallery';
 
 const View = () => {
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-7xl">
+    <div className=" mx-auto bg-white shadow-md min-h-screen bg-white ">
       <div className="flex">
         <div className="flex justify-center items-center">
           <FaHome className="h-12 w-12 text-gray-900" />
@@ -34,7 +34,7 @@ const View = () => {
       </div>
       <Gallery/>
     </div>
-    
+
   );
 }
 

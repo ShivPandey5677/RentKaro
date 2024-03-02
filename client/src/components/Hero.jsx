@@ -36,7 +36,7 @@ const Hero = () => {
                 repeat={Infinity}
               />
             </span>
-            Renting and Listing System
+            Renting and Listing 
           </h1>
           <motion.p
             initial={{ scale: 0.8 }}
