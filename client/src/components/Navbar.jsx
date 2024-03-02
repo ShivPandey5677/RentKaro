@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineHome, AiOutlineInfoCircle, AiOutlineLogin, AiOutlineUser, AiOutlineUserAdd, AiOutlineUserSwitch, AiOutlineMail } from 'react-icons/ai';
-
+import { MdOutlineHomeWork } from "react-icons/md";
 // 
 const Navbar = () => {
     return (
@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
 
           <Link to="/psychiatrist" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
-            <AiOutlineUserSwitch size={20}/> Psychiatrist
+            <MdOutlineHomeWork size={20}/> Properties
           </Link>
           <Link to="/register" spy={true} smooth={true} className="hover:bg-teal-800 hover:text-white-500 hover:rounded  transition py-2 px-4 hover:scale-110 ease-in duration-200">
             <AiOutlineUserAdd size={20}/> <b>SignUp</b>
