@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import PropertyCard from '../components/PropertyCard'
 import Properties from '../components/Properties'
+import UserCard from './UserCard'
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     <div>
       <Hero/>
       <Properties/>
+    
 
      
     </div>
