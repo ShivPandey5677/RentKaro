@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Login = () => {
   const [inputs, setInputs] = useState({
@@ -17,8 +17,10 @@ const Login = () => {
     // Your login logic here
   };
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen); // Toggle popup state
+
+
+  const handleClose = () => {
+    setIsOpen(false); // Close the popup
   };
 
   return (
@@ -26,7 +28,7 @@ const Login = () => {
     
         <div className="fixed inset-0 flex items-center justify-center">
           <img
-            src="/assets/images/new.jpg"
+            src="/assets/images/heross1.png"
             alt="Quiz"
             className="fixed inset-0 object-cover w-full h-full"
           />
@@ -63,7 +65,7 @@ const Login = () => {
                 </div>
               </div>
               <button
-                onClick={togglePopup}
+                onClick={handleClose}
                 className="mt-4 bg-blue-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
               >
                 Close
@@ -75,4 +77,4 @@ const Login = () => {
   );
 }
 
-export default Login
+export default Login;
