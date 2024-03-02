@@ -24,7 +24,7 @@ const Navbar = () => {
             <AiOutlineInfoCircle size={20}/> About
           </Link>
 
-          <Link to="/psychiatrist" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
+          <Link to="/property" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
             <MdOutlineHomeWork size={20}/> Properties
           </Link> 
         </div>

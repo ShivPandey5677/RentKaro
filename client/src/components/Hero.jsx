@@ -1,52 +1,60 @@
-import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
+import LoginPopup from './LoginPopup';
 
 const Hero = () => {
-  return (
-    <div className="bg-slate-900 text-white h-screen">
-      <div className='w-full h-full mx-auto my-auto flex justify-center align-center' id='home'>
+  const [showPopup, setShowPopup] = useState(false);
 
-        <div className='flex-col mx-auto my-5'>
-          <div className="my-10">
-            <h2 className='h1-semibold text-4xl font-bold mt-8'> 
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
+  return (
+    <div className="h-screen bg-gray-900 text-white">
+      <div className="container mx-auto flex items-center justify-center h-full">
+        <motion.div
+          initial={{ x: '100vw', scale: 0.5 }}
+          animate={{ x: 0, scale: 1 }}
+          transition={{ type: 'spring', stiffness: 80, duration: 1.5 }}
+          className="flex-none mr-8"
+        >
+          <img src="/assets/images/new.jpg" alt="Quiz" className="rounded-lg mb-8 mr-8" style={{ maxWidth: '700px' }} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ delay: 0.5, duration: 1.5, type: 'spring', stiffness: 80 }}
+          className="flex flex-col items-center"
+        >
+          <h1 className="text-5xl font-bold mb-4 ">
+            <span className="gradient-text">
               <TypeAnimation
-                sequence={[
-                  "Find PG",
-                  1000,
-                  "Find Flats",
-                  1000,
-                  "List Properties",
-                  1000,
-                  "Roommate Matching",
-                  1000,
-                ]}
-                wrapper='span'
-                speed={35}
+                sequence={['Paying Guest', 1000, 'Flat', 1000, 'House', 1000, 'Accomodation', 1000]}
+                wrapper="span"
+                typingSpeed={10000}
                 repeat={Infinity}
               />
-            </h2>
-            <h4 className='h1-semibold text-purple-300'>Find Your Perfect Accommodation</h4>
-          </div>
-
-          <div className="relative inline-flex group my-3">
-            <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#1f2326] via-[#866e84] to-[#0d0606] rounded-xl blur-ig group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-            <a href='/' title="Download CV" role="button" className="h-[60px] relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-primary-color font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">CONTINUE</a>
-          </div>
-        </div>
-
-        <div className='my-auto'>
-  <img 
-    className='w-[300px] sm:w-[500px] mx-auto h-auto' 
-    src={"https://i.pinimg.com/736x/fb/4e/5b/fb4e5b3e6b5a6b6836f59090c0f62a6c.jpg"} 
-    alt="profile pic" 
-    style={{ mixBlendMode: 'multiply' }} // Apply blend mode inline
-  />
-</div>
-
+            </span>
+            Renting and Listing System
+          </h1>
+          <motion.p
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            className="text-xl mb-8"
+          ><br></br>
+            Find Your Perfect Accommodation
+          </motion.p>
+          
+          <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-blue-800 " onClick={togglePopup}>
+            Continue
+          </button>
+          
+        </motion.div>
       </div>
+      {showPopup && <LoginPopup onClose={togglePopup} />}
     </div>
   );
-}
+};
 
 export default Hero;
