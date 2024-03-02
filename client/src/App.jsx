@@ -12,6 +12,8 @@ import Home from "./pages/Home";
 import Property from "./pages/Property";
 import View from "./pages/View";
 import Listproperty from "./pages/Listproperty";
+import ReportFraud from "./pages/Report";
+import AddTenant from "./components/AddTenant";
 function App() {
   const currentUser=false;
   const Layout=()=>{
@@ -44,6 +46,14 @@ function App() {
         {
           path:'/viewproperty',
           element:<View/>
+        },
+        {
+          path:'/reportfraud',
+          element:<ReportFraud/>
+        },
+        {
+          path:'/addtenant',
+          element:<AddTenant/>
         },
       ]
     },
