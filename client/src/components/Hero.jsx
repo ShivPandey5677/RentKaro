@@ -4,8 +4,8 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
-    <div className="bg-slate-900 text-white">
-      <div className='my-7 sm:my-0 max-w-[1200px] h-auto mx-auto flex flex-col-reverse sm:flex-row justify-center align-center' id='home'>
+    <div className="bg-slate-900 text-white min-h-screen">
+      <div className='my-7 sm:my-0 max-w-[1200px] h-full mx-auto flex flex-col-reverse sm:flex-row justify-center align-center' id='home'>
 
         <div className='flex-col my-auto mx-auto'>
           <p className='md:text-5xl sm:text-4xl text-xl font-bold text-purple-300'>Hi! I am Abhishek Jha</p>
