@@ -26,14 +26,7 @@ const Navbar = () => {
 
           <Link to="/psychiatrist" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
             <MdOutlineHomeWork size={20}/> Properties
-          </Link>
-          <Link to="/register" spy={true} smooth={true} className="hover:bg-teal-800 hover:text-white-500 hover:rounded  transition py-2 px-4 hover:scale-110 ease-in duration-200">
-            <AiOutlineUserAdd size={20}/> <b>SignUp</b>
-          </Link>
-
-          <Link to="/login" spy={true} smooth={true} className="hover:bg-teal-800  hover:text-white-500 hover:rounded transition py-2 px-4 hover:scale-110 ease-in duration-200">
-            <AiOutlineLogin size={20}/><b> LogIn</b>
-          </Link>
+          </Link> 
         </div>
         <div className="lg:hidden block bg-slate-900 text-white py-4 px-6 ">
           <ul className="flex text-center text-xl space-x-6">
