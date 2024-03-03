@@ -17,6 +17,7 @@ import { AuthContext } from "./context/authContext";
 import Listproperty from "./pages/Listproperty";
 import ReportFraud from "./components/ReportFraud";
 import AddTenant from "./components/AddMoreTenant";
+import ChatBot from "./pages/ChatBot";
 import AboutSection from "./pages/about";
 
 function App() {
@@ -59,6 +60,10 @@ function App() {
           element: <Listproperty/>,
         },
         {
+          path:'/ChatBot',
+          element:<ChatBot/>
+        },
+        {
           path: "/reportfraud",
           element: <ReportFraud/>,
         },
@@ -69,10 +74,6 @@ function App() {
         {
           path:'/about',
           element:<AboutSection/>
-        },
-        {
-          path:'/ChatBot',
-          element:""
         },
       ]
     },
