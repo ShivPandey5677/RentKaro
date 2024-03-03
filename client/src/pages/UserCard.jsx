@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const UserCard = ({tenant}) => {
   return (
     <div className="max-w-xs rounded overflow-hidden shadow-2xl bg-gray-800 relative transition duration-300 transform hover:scale-105 my-8 mx-auto">

@@ -60,7 +60,7 @@ const AddTenant = ({ onClose }) => {
         withCredentials:true,
       });
       console.log("Products added successfully:", response.data);
-      
+
     } catch (error) {
       console.log("Error adding products:", error);
     }
@@ -125,7 +125,7 @@ const AddTenant = ({ onClose }) => {
             <button onClick={handleVerificationImage} className="text-black">Save Image</button>         
           </div>
           <div className="text-right">
-            <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600" onClick={handleSubmit}>Submit</button>
+            <button type="submit" className="bg-slate-500 text-white py-2 px-4 rounded hover:bg-slate-900" onClick={handleSubmit}>Submit</button>
           </div>
         </div>
       </div>

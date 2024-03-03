@@ -11,8 +11,8 @@ const propertyData=location.state;
 const property=propertyData.propertyData;
   return (
     <div className=" mx-auto bg-white shadow-md min-h-screen">
-      <div className="flex">
-        <div className="flex justify-center items-center">
+      <div className="flex border border-black mb-2">
+        <div className=" flex justify-center items-center">
           <FaHome className="h-12 w-12 text-gray-900" />
         </div>
         <div className="flex-1 p-8 flex">

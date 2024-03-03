@@ -84,6 +84,7 @@ const Property = () => {
       </div>
     </div>
   );
+  
 }
 
 export default Property;

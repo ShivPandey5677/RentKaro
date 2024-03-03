@@ -49,7 +49,7 @@ const Register = () => {
             alt="Quiz"
             className="fixed inset-0 object-cover w-full h-full"
           />
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-75"></div>
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-60 backdrop-filter backdrop-blur-sm"></div>
           <div className="fixed inset-0 flex items-center justify-center">
             <div className="bg-blue-100 p-8 rounded shadow-md w-96">
           <h1 className="text-2xl font-semibold text-[#176B87] mb-4">SignUp</h1>
