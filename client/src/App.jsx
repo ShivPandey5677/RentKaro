@@ -17,6 +17,8 @@ import { AuthContext } from "./context/authContext";
 import Listproperty from "./pages/Listproperty";
 import ReportFraud from "./components/ReportFraud";
 import AddTenant from "./components/AddMoreTenant";
+import AboutSection from "./pages/about";
+
 function App() {
   const {currentUser}=useContext(AuthContext);
   const queryClient=new QueryClient();
@@ -63,6 +65,14 @@ function App() {
         {
           path:'/addtenant',
           element:<AddTenant/>
+        },
+        {
+          path:'/about',
+          element:<AboutSection/>
+        },
+        {
+          path:'/ChatBot',
+          element:""
         },
       ]
     },

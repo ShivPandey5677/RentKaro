@@ -20,7 +20,7 @@ const Navbar = () => {
           <Link to="/" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
             <AiOutlineHome size={20} /> Home
           </Link>
-          <Link to="/About" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
+          <Link to="/about" spy={true} smooth={true} className="hover:bg-slate-800 hover:rounded py-2 px-4 hover:scale-110 ease-in duration-200">
             <AiOutlineInfoCircle size={20}/> About
           </Link>
 
