@@ -15,6 +15,8 @@ import Listproperty from "./pages/Listproperty";
 import ReportFraud from "./pages/Report";
 import AddTenant from "./components/AddTenant";
 import ChatBot from "./pages/ChatBot";
+import AboutSection from "./pages/about";
+
 function App() {
   const currentUser=false;
   const Layout=()=>{
@@ -59,6 +61,14 @@ function App() {
         {
           path:'/addtenant',
           element:<AddTenant/>
+        },
+        {
+          path:'/about',
+          element:<AboutSection/>
+        },
+        {
+          path:'/ChatBot',
+          element:""
         },
       ]
     },
