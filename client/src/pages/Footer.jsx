@@ -14,7 +14,7 @@ const Footer = () => {
 
           <Link to="/about" className="font-bold hover:text-blue-400 text-white" >About</Link>
           <Link to="/reportfraud" className="font-bold hover:text-blue-400 text-white" >Report A Fraud</Link>
-          <Link to="/contact" className="font-bold hover:text-blue-400 text-white" >Contact Us</Link>
+          <Link to="/ChatBot" className="font-bold hover:text-blue-400 text-white" >Contact Us</Link>
          
         </div>
       </div>
