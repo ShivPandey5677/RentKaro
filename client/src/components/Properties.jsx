@@ -45,12 +45,12 @@ const Properties = () => {
             RentKaro, where dreams take flight, finding your perfect ACCOMMODATION in just a byte!
           </motion.p>
           <div className="flex flex-row">
-            <Link to="/psychiatrist">
+            <Link to="/property">
               <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-[#0c131d] hover:bg-[#223d62] mr-4">
                 Find Properties
               </button>
             </Link>
-            <Link to="/psychiatrist">
+            <Link to="/listproperty">
               <button className="font-sans text-lg rounded-md uppercase text-white cursor-pointer border-3 border-blue-500 p-2 px-4 relative select-none shadow-1 shadow-2 shadow-3 shadow-4 shadow-5 transition-transform duration-200 ease-in-out transform hover:translate-x-1 hover:translate-y-1 bg-[#0c131d] hover:bg-[#223d62]">
                 List Properties
               </button>

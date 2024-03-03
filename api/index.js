@@ -2,6 +2,7 @@ import express from "express";
 import multer from "multer";
 import userRoutes from "./routes/user.js"
 import authRoutes from "./routes/auth.js"
+import propRoutes from "./routes/property.js"
 // import postRoutes from "./routes/question.js"
 // import likeRoutes from "./routes/psych.js"
 // import blogRoutes from "./routes/blog.js"
@@ -18,7 +19,7 @@ app.use(cors({
 ))
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, '../client/public/upload')
+      cb(null, '../client/public/uploads')
     },
     filename: function (req, file, cb) {
       cb(null, Date.now()+file.originalname)
@@ -28,12 +29,11 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage })
 app.use(cookieParser())
 app.use("/api/auth",authRoutes);
-app.use("/api/users",userRoutes);
-// app.use("/api/question",postRoutes);
-// app.use("/api/psych",likeRoutes);
-// app.use("/api/blog",blogRoutes);
+app.use("/api/user",userRoutes);
+app.use("/api/property",propRoutes)
 app.use("/api/upload",upload.single("file"),(req,res)=>{
     const file=req.file;
+    console.log(file)
     res.status(200).json(file.filename)
 })
 

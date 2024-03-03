@@ -1,5 +1,6 @@
 import express from "express";
-import { getUser } from "../controllers/user.js"
+import { addTenant, getUser } from "../controllers/user.js"
 const router=express.Router();
-router.get("/find/:userId", getUser)
+router.get("/", getUser)
+router.post("/tenant",addTenant);
 export default router;

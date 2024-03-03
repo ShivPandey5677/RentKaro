@@ -14,6 +14,9 @@ import View from "./pages/View";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
+import Listproperty from "./pages/Listproperty";
+import ReportFraud from "./components/ReportFraud";
+import AddTenant from "./components/AddMoreTenant";
 function App() {
   const {currentUser}=useContext(AuthContext);
   const queryClient=new QueryClient();
@@ -46,7 +49,20 @@ function App() {
         },
         {
           path:'/viewproperty',
-          element:<View/>
+          element:<View/>,
+          props:true
+        },
+        {
+          path: "/listproperty",
+          element: <Listproperty/>,
+        },
+        {
+          path: "/reportfraud",
+          element: <ReportFraud/>,
+        },
+        {
+          path:'/addtenant',
+          element:<AddTenant/>
         },
       ]
     },
@@ -58,7 +74,6 @@ function App() {
       path: "/register",
       element: <Register/>,
     },
-    
    
   ]);
  
